@@ -16,11 +16,11 @@ def split_text(text: str, chunk_size: int = 500, overlap: int = 50):
 
         # agr chunk size exceed hua 
         if current_size + sentence_size > chunk_size and current_chunk:
-            # to current chunk ko save kr rhe h 
+            # current chunk ko save kr rhe h 
             chunk_text = " ".join(current_chunk)
             chunks.append(chunk_text)
 
-            # overlap handle kr rhe h
+            # handling overlap
             overlap_words = chunk_text.split()[-overlap:]
             # new chunk me overlap words add kr rhe h
             current_chunk = [" ".join(overlap_words), sentence]
