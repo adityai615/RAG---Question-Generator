@@ -26,7 +26,7 @@ def read_docx_file(file_path: str):
 
 def read_document(file_path: str):
     """read document content based on file"""
-    _, file_extension = os.path.splittext(file_path)
+    _, file_extension = os.path.splitext(file_path)
     file_extension = file_extension.lower()
 
     if file_extension == '.txt':
