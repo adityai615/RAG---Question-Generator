@@ -14,7 +14,7 @@ def extract_text_from_image(image_path: str) -> str:
 
     extracted_text = []
 
-    # result -> list of boxes + text
+    # result -> item as text
     for line in result:
         for item in line:
             extracted_text.append(item["text"])
