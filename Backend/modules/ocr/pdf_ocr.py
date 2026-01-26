@@ -12,7 +12,7 @@ def preprocessing_image(img: Image.Image) -> Image.Image:
     img = img.filter(ImageFilter.SHARPEN) # Sharpen Edges
     return img
 
-
+# paddle ocr ko load
 ocr = PaddleOCR(lang='en', use_angle_cls=True)
 
 def extract_text_from_pdf(pdf_path: str, temp_folder="temp_pages") -> str:
